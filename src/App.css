@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+
+/* configrações padrão */
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.padrao {
+    background-color: #E50914;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-weight: 100;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* 
+// ESTILIZAÇÃO DO HEADER */
+.Header {
+    height: 4rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.HeaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeaderNovo {
+    border-radius: 10px;
+    background-color: #E50914;
+}
+
+.HeaderNovoSpan {
+    display: block;
+    padding: 5px 7px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.HeaderDescricao {
+    text-align: left;
+    color: black;
+    margin-left: 15px;
+}
+
+.HeaderDescricaoSpan {
+    font-size: 0.9em;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.HeaderDescricaoSpanDestaque {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.HeaderSaibaMais {
+    color: #4f97e4;
+    font-size: 0.9em;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeaderSaibaMais a {
+    display: inline-block;
+    min-width: 100px;
+    text-decoration: none;
+    margin-left: 10px;
+    align-self: center;
+    align-items: center;
+}
+
+.HeaderSaibaMais a:visited {
+    color: #4f97e4;
+}
+
+.HeaderSaibaMaisBotao {
+    /* font-size: em; */
+    margin-left: 5px;
+}
+
+/* FIM DO HEADER E INICIO DA MEDIA QUERIE DO HEADER */
+@media (min-width:500px) {
+    .HeaderContainer {
+        /* max-width: 501px; */
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .HeaderNovo {
+        font-size: 1.2em;
+        border-radius: 15px;
+        font-weight: 900;
+    }
+
+    .HeaderDescricao {
+        font-size: 1.3em;
+    }
+
+    .HeaderSaibaMais {
+        font-size: 1.1em;
+        margin-left: 15px;
+    }
+
+    .HeaderSaibaMais i {
+        font-size: 1.2em;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+}
+
+/* FIM DA MEDIAQUERIE DO HEADER E INICIO DA FORMATAÇÃO DA MAIN */
+
+.Main {
+    min-width: 100vw;
+    min-height: calc(100vh - 4rem);
+    background-image: url("./Assets/mainPrincipalBackground.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+/* vai receber as estilizações do main */
+.transparent-container {
+    min-width: 100vw;
+    min-height: calc(100vh - 4rem);
+    background-image: linear-gradient(0deg, transparent 50%, rgba(0, 0, 0, .7)), radial-gradient(50% 100%, transparent 0, rgba(0, 0, 0, .7) 100%);
+}
+
+.MainHeader {
+    box-sizing: border-box;
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.idioma {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid white;
+}
+
+
+i {
+    margin-left: 3px;
+}
+.MainHeaderLogo img {
+    width: 90px;
+}
+
+
+
+.MainHeaderBotoes{
+    display: flex;
+    position: relative;
+}
+.idioma {
+    padding: 10px 7px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    margin-left: 40px;
+}
+.idiomaDisplay{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10px;
+    font-size: 0.9em;
+    width: 110px;
+    height: 9px;
+    
+}
+.idiomaDisplay img{
+    width: 15px;
+    height: 14px;
+}
+.idiomaDisplay span{
+    margin: 0 3px;
+}
+
+.idiomaOptions{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    
+    cursor: default;
+}
+.idiomaOptions span{
+    padding: 5px 25px;
+    font-size: 0.9em;
+    background-color: rgb(153, 153, 153);
+}
+.idiomaOptions span:hover{
+    background-color: #4f97e4;
+}
+
+@media (min-width: 553px){
+    .idiomaOptions{
+        margin-right: 97px;
+    }
+}
+
+
+
+
+
+
+
+.MainHeaderBotaoEntrar {
+    margin-left: 10px;
+    border-radius: 3px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+/* Configurações do MainHeader dos botões com MQ*/
+@media(min-width:553px) {
+    .MainHeader {
+        padding: 48px 45px;
+        justify-content: space-between;
+    }
+
+    .MainHeaderLogo img {
+        width: 110px;
+    }
+
+    .idioma {
+        padding: 10px 7px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        margin-right: 15px;
+    }
+
+    .MainHeaderBotaoEntrar {
+        padding: 7px 15px;
+        font-size: 1em;
+        height: 35px;
+    }
+    .idiomaDisplay{
+        width: 110px;
+        height: 15px;
+    }
+}
+
+@media(min-width:955px) {
+    .MainHeaderLogo img {
+        width: 130px;
+    }
+}
+
+/* INICIO DA FORMATAÇÃO DO BANNER */
+.MainPrincipal {
+    width: 100vw;
+    height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.MainPrincipalH1 {
+    font-size: 1.75em;
+    margin-bottom: 12px;
+}
+
+.MainPrincipalH2 {
+    font-size: 1.15em;
+    font-weight: 100;
+    margin-bottom: 12px;
+}
+
+.MainPrincipalh3 {
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-bottom: 12px;
+}
+
+.MainPrincipalInput {
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.MainPrincipalBotao {
+    background-color: #E50914;
+    color: white;
+    padding: 15px;
+    border: none;
+    box-shadow: none;
+    border-radius: 3px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/*MQ DO BANNER*/
+@media (min-width:554px) {
+    .MainPrincipalBox {
+        height: calc(100vh - 250px);
+        padding: 25px;
+    }
+
+    .MainPrincipalH1 {
+        font-size: 3.4em;
+    }
+
+    .MainPrincipalH2 {
+        font-size: 1.7em;
+    }
+}
+
+@media (min-width:626px) {
+    .MainPrincipalBox {
+        max-width: 600px;
+        height: calc(100vh - 250px);
+        padding: 25px;
+    }
+
+    .MainPrincipalH1 {
+        font-size: 3em;
+        margin-bottom: 13px;
+    }
+
+    .MainPrincipalH2 {
+        font-size: 1.9em;
+    }
+}
+
+@media (min-width:740px) {
+    .MainPrincipalBox {
+        max-width: 720px;
+        height: calc(100vh - 250px);
+        padding: 25px;
+    }
+
+    .MainPrincipalH1 {
+        font-size: 3em;
+        margin-bottom: 13px;
+    }
+
+    .MainPrincipalH2 {
+        font-size: 1.7em;
+    }
+
+    .MainPrincipalh3 {
+        margin: 0 auto;
+        font-size: 1.5em;
+        width: 500px;
+        margin-bottom: 15px;
+    }
+
+    .MainPrincipalInput {
+        width: 70%;
+        padding: 20px 15px;
+    }
+}
+
+@media (min-width:957px) {
+    .MainPrincipalBox {
+        width: 1100px;
+    }
+
+    .MainPrincipalH1 {
+        font-size: 3.1em;
+        margin-bottom: 13px;
+    }
+
+    .MainPrincipalH2 {
+        font-size: 1.7em;
+        margin-bottom: 25px;
+    }
+
+    .MainPrincipalh3 {
+        margin: 0 auto;
+        font-size: 1.2em;
+        width: 700px;
+        margin-bottom: 15px;
+    }
+
+    .MainPrincipalInput {
+        width: 70%;
+        padding: 18px 18px;
+        display: inline;
+        font-size: 1.4em;
+    }
+
+    .MainPrincipalBotao {
+        background-color: #E50914;
+        color: white;
+        padding: 20px 20px;
+        border: none;
+        box-shadow: none;
+        border-radius: 3px;
+        font-size: 1.4em;
+        font-weight: 600;
+        border-radius: 0;
+    }
+}
+
+/*ESTILIZAÇÃO DOS STORYCARDS*/
+
+.ContainerStoryCard {
+    background-color: rgb(34, 34, 34);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.StoryCard {
+    background-color: black;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 60px 10px;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.StoryCardBoxImg {
+    margin-top: 20px;
+}
+
+.StoryCardBoxTexto h2 {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+}
+
+@media(min-width:559px) {
+    .StoryCard {
+        padding: 80px 50px;
+    }
+
+    .StoryCardBoxTexto h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+}
+
+@media(min-width:950px) {
+    .StoryCard {
+        max-width: 1100px;
+
+        margin: 10px auto;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .StoryCardBoxTexto {
+        padding: 30px;
+    }
+
+    .StoryCardBoxTexto h2 {
+        font-size: 3em;
+    }
+
+    .StoryCardBoxTexto h3 {
+        font-size: 1.5em;
+    }
+
+    .reverse div{
+        flex-direction: row-reverse;
+    }
+
+    .StoryCardBg {
+        background-color: black;
+    }
+}
+
+/*FORMATAÇÃO FAQ */
+.FAQ{
+    padding: 50px 0 20px 0;
+}
+.FAQTitulo{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.FAQPergunta{
+    padding: 15px;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.FAQTituloBotao{
+    font-size: 2em;
+    font-weight: 100;
+}
+.FAQTituloPergunta{
+    font-size: 1.2em;
+    font-weight: 100;
+}
+.FAQResposta{
+    padding: 15px;
+    background-color: #444;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+@media(min-width:550px){
+    .FAQ{
+        padding: 70px 0 30px 0;
+    }
+    .FAQPerguntaBox{
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+    .FAQTitulo{
+        font-size: 1.5em;
+    }
+}
+@media(min-width:950px){
+    .FAQPerguntaBox{
+        max-width: 70vw;
+    }
+    .FAQPerguntaBox{
+        font-size: 1.3em;
+    }
+    .FAQResposta{
+        font-size: 1.3em;
+    }
+}
+@media(min-width:1200px){
+    .FAQPerguntaBox{
+        max-width: 800px;
+    }
+}
+.BoxLead{
+    padding: 0 0 40px 0;
+}
+
+.BoxLeadTitulo{
+    max-width: 70vw;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+.BoxLeadInput{
+    width: 90vw;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.BoxLeaeBotaoDiv{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.BoxLeadBotao{
+    padding: 7px 12px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    box-shadow: none;
+}
+
+@media (min-width:550px){
+    .BoxLead{
+        max-width: 70vw;
+        margin: 0 auto;
+    }
+    .BoxLeadInput{
+        width: 60vw;
+    }
+    .BoxLeadTitulo{
+        font-weight: 100;
+    }
+}
+@media (min-width:950px){
+    .BoxLeadTitulo{
+        margin-bottom: 20px;
+    }
+    .BoxLeadInput{
+        width: 450px;
+        display: inline-block;
+        padding: 15px;
+        font-size: 1.2em;
+        
+    }
+    .BoxLeaeBotaoDiv{
+        display: inline-block;
+        margin: 0 auto;
+    }
+    .BoxLeadBotao{
+        padding: 15px;
+        font-size: 1.5em;
+    }
+    .GroupBox{
+        width: 620px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.separador{
+    height: 10px;
+    background-color: #444;
+    border: none;
+    width: 100vw;
+}
+
+.Footer{
+    padding: 50px 0px 40px 30px;
+    color: rgb(108, 108, 108);
+}
+.FooterTitulo{
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.FooterLinksUl{
+    
+    font-size: 0.9em;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.FooterLinksLi{
+    margin: 7px 7px 7px 0;
+}
+.FooterLinksLi:hover{
+    text-decoration: underline;
+}
+.FooterLinksLi a{
+    text-decoration: none;
+    color: rgb(108, 108, 108);
+}
+
+
+
+.AreaBotaoFooter{
+    position: relative;
+}
+
+.BotaoFooter{
+    border: 1px solid #444;
+    max-width: 170px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 10px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+.BotaoFooterIconWorld{
+    width: 20px;
+}
+.BotaoFooterTitulo{
+    font-weight: 100;
+    font-size: 1em;
+}
+.BotaoFooterIcoArrow{
+    width: 10px;
+}
+.BotaoFooterTitulo{
+    color: white;
+}
+.OpcoesBotaoFooter{
+    max-width: 170px;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #444;
+}
+.OpcaoFooter{
+    
+    background-color: black;
+    max-width: 170px;
+    
+    cursor: pointer;
+    padding: 5px 0 5px 60px;
+    color: white;
+    font-size: 0.9em;    
+}
+.OpcaoFooter:hover{
+    background-color: #4f97e4;
+}
+
+@media (min-width: 500px){
+    .FooterLinksUl{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .FooterLinksLi{
+        margin: 10px 40px 10px 5px;
+        font-size: 0.96em;
+    }
+}
+
+@media (min-width: 744px){
+    .FooterLinksUl{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .FooterLinksLi{
+        margin: 10px 40px 10px 5px;
+        font-size: 0.96em;
+    }
+    .Footer{
+        padding: 80px;
+    }
+}
+@media (min-width:1000px){
+    .Footer{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Netflix{
+    color: rgb(108, 108, 108);
+    text-decoration: none;
+}
+.Netflix:hover{
+    text-decoration: underline;
+}
